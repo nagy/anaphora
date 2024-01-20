@@ -377,6 +377,15 @@
                      (1 (list :yes it))
                      (2 :nono))))))
 
+;;; anaphoric-dolist
+
+(ert-deftest anaphoric-dolist-01 nil
+  (should (equal '6
+                 (let ((x 0))
+                   (adolist '(1 2 3)
+                     (incf x it))
+                   x))))
+
 ;;; anaphoric-let
 
 (ert-deftest anaphoric-let-01 nil
