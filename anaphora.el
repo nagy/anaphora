@@ -347,7 +347,7 @@ EXPR and CLAUSES are otherwise as documented for `ecase'."
 The variable `it' is available within CLAUSES.
 
 EXPR and CLAUSES are otherwise as documented for `typecase'."
-  (declare (debug typecase)
+  (declare (debug cl-typecase)
            (indent 1))
   `(let ((it ,expr))
      (cl-typecase it ,@clauses)))
@@ -359,7 +359,7 @@ EXPR and CLAUSES are otherwise as documented for `typecase'."
 The variable `it' is available within CLAUSES.
 
 EXPR and CLAUSES are otherwise as documented for `etypecase'."
-  (declare (debug etypecase)
+  (declare (debug cl-etypecase)
            (indent 1))
   `(let ((it ,expr))
      (cl-etypecase it ,@clauses)))
